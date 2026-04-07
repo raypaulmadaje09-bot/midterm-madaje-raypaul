@@ -1,0 +1,580 @@
+<!-- 
+    PART IV - HOSTING LINKS
+    GitHub Pages: https://yourusername.github.io/midterm-madaje-raypaul
+    Neocities: https://yoursitename.neocities.org
+    
+    Replace the URLs above with your actual hosted links after deployment
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Webpage - PART II JavaScript</title>
+    <style>
+        /* Tag Selectors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #1a237e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #283593;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #3f51b5;
+            transform: scale(1.05);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        article {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3f51b5;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        article h3 {
+            color: #1a237e;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        article p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.8;
+            font-size: 1em;
+        }
+
+        aside {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 8px;
+            color: white;
+            height: fit-content;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #1a237e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 0.95em;
+            border-top: 4px solid #3f51b5;
+        }
+
+        footer p {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        /* Class Selectors */
+        .main-content {
+            grid-column: 1;
+        }
+
+        .sidebar {
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+
+        .sidebar-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .sidebar-item {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .sidebar-item:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            border-left-color: white;
+            padding-left: 20px;
+        }
+
+        .highlight {
+            background-color: #fff3e0;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #e65100;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* JavaScript Styling */
+        .info-box {
+            background-color: #e8eaf6;
+            border-left: 4px solid #3f51b5;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .info-box strong {
+            color: #1a237e;
+            font-size: 1.1em;
+        }
+
+        .input-section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4caf50;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-section h3 {
+            color: #1a237e;
+            font-size: 1.6em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3f51b5;
+            box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+        }
+
+        button {
+            background-color: #3f51b5;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #283593;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            background-color: #c8e6c9;
+            border-left: 4px solid #4caf50;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+
+        .dynamic-content {
+            background-color: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .dynamic-content.active {
+            display: block;
+        }
+
+        .theme-button {
+            background-color: #ff9800;
+        }
+
+        .theme-button:hover {
+            background-color: #f57c00;
+        }
+
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        body.dark-theme article,
+        body.dark-theme .input-section {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        body.dark-theme article h3 {
+            color: #90caf9;
+        }
+
+        /* ID Selector */
+        #header-subtitle {
+            font-size: 1.1em;
+            color: #bbdefb;
+            margin-top: 5px;
+        }
+
+        #featured-article {
+            border-left-color: #ff6f00;
+            background-color: #fff8f0;
+        }
+
+        #featured-article h3 {
+            color: #e65100;
+        }
+
+        #userOutput {
+            font-weight: 600;
+            color: #1a237e;
+            font-size: 1.1em;
+        }
+
+        #dynamicOutput {
+            font-weight: 600;
+            color: #2e7d32;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-column: 1;
+                grid-row: auto;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Welcome to My Professional Website</h1>
+        <p id="header-subtitle">PART II - JavaScript Interactive Features</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECTION with ARTICLES and ASIDE -->
+    <section>
+        <!-- ARTICLES (Main Content) -->
+        <div class="main-content">
+            <!-- A. VARIABLES AND OUTPUT -->
+            <article id="featured-article">
+                <h3>📋 Student Information</h3>
+                <p>Student Name: <span id="userOutput"></span></p>
+                <p>Course: <span id="courseOutput"></span></p>
+            </article>
+
+            <!-- B. BUTTON FUNCTION & ALERT -->
+            <article>
+                <h3>🔔 Interactive Alerts</h3>
+                <p>Click the button below to display an alert message with your information.</p>
+                <button onclick="showAlert()">Show Alert</button>
+                <button onclick="showWelcomeMessage()">Welcome Message</button>
+            </article>
+
+            <!-- C. USER INPUT SECTION -->
+            <div class="input-section">
+                <h3>✏️ User Input & Dynamic Display</h3>
+                <div class="form-group">
+                    <label for="nameInput">Enter Your Name:</label>
+                    <input type="text" id="nameInput" placeholder="Type your full name here...">
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Enter Your Email:</label>
+                    <input type="email" id="emailInput" placeholder="Type your email here...">
+                </div>
+                <button onclick="displayUserInfo()">Display Info</button>
+                <button onclick="clearInfo()">Clear</button>
+                <div id="dynamicOutput"></div>
+            </div>
+
+            <!-- D. EVENT HANDLING - DYNAMIC CONTENT -->
+            <article>
+                <h3>🎨 Event Handling & Theme</h3>
+                <p>Click the buttons below to interact with the page dynamically. Change the theme or show hidden content.</p>
+                <button onclick="toggleTheme()" class="theme-button">Toggle Dark Theme</button>
+                <button onclick="showDynamicContent()">Show Hidden Content</button>
+                <button onclick="changeFontSize()">Increase Font Size</button>
+                <div id="hiddenContent" class="dynamic-content">
+                    <p>✨ <strong>Hidden Content Revealed!</strong> This content appears dynamically when you click the button. Events make web pages interactive and engaging for users!</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- ASIDE (Sidebar) -->
+        <aside class="sidebar">
+            <div class="sidebar-title">📌 Quick Features</div>
+            <div class="sidebar-item" onclick="highlightSidebar(this)">📌 Variables Demo</div>
+            <div class="sidebar-item" onclick="highlightSidebar(this)">🔔 Alert Functions</div>
+            <div class="sidebar-item" onclick="highlightSidebar(this)">✏️ Input Handling</div>
+            <div class="sidebar-item" onclick="highlightSidebar(this)">🎨 Event Listeners</div>
+            <div class="sidebar-item" onclick="highlightSidebar(this)">⭐ More Features</div>
+        </aside>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 My Professional Website - PART II: JavaScript</p>
+            <p>Email: contact@mywebsite.com | Phone: (555) 123-4567</p>
+            <p id="footerDate"></p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ====================================
+        // A. VARIABLES AND OUTPUT (10 PTS)
+        // ====================================
+        // Declare variables
+        const studentName = "Ray Paul Madaje";
+        const courseName = "Web Development - MIDTERM";
+        const universityName = "State University";
+        let fontSizeMultiplier = 1;
+        let isDarkTheme = false;
+
+        // Display variables on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('userOutput').textContent = studentName;
+            document.getElementById('courseOutput').textContent = courseName;
+            document.getElementById('footerDate').textContent = `Last Updated: ${new Date().toLocaleDateString()}`;
+        });
+
+        // ====================================
+        // B. FUNCTIONS WITH ALERTS (10 PTS)
+        // ====================================
+        function showAlert() {
+            alert(`Student Name: ${studentName}\nCourse: ${courseName}\nUniversity: ${universityName}`);
+        }
+
+        function showWelcomeMessage() {
+            const message = `Welcome, ${studentName}! You are enrolled in ${courseName}.`;
+            alert(message);
+        }
+
+        // ====================================
+        // C. USER INPUT HANDLING (10 PTS)
+        // ====================================
+        function displayUserInfo() {
+            const userName = document.getElementById('nameInput').value;
+            const userEmail = document.getElementById('emailInput').value;
+
+            if (userName === '' || userEmail === '') {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(userEmail)) {
+                alert('Please enter a valid email address!');
+                return;
+            }
+
+            const outputDiv = document.getElementById('dynamicOutput');
+            outputDiv.innerHTML = `
+                <div class="success-message">
+                    ✅ Information Received!<br>
+                    <strong>Name:</strong> ${userName}<br>
+                    <strong>Email:</strong> ${userEmail}<br>
+                    <strong>Course:</strong> ${courseName}<br>
+                    Thank you for submitting your information!
+                </div>
+            `;
+        }
+
+        function clearInfo() {
+            document.getElementById('nameInput').value = '';
+            document.getElementById('emailInput').value = '';
+            document.getElementById('dynamicOutput').innerHTML = '';
+        }
+
+        // ====================================
+        // D. EVENT HANDLING (10 PTS)
+        // ====================================
+        function showDynamicContent() {
+            const hiddenContent = document.getElementById('hiddenContent');
+            hiddenContent.classList.toggle('active');
+        }
+
+        function toggleTheme() {
+            isDarkTheme = !isDarkTheme;
+            document.body.classList.toggle('dark-theme');
+            
+            const message = isDarkTheme ? 'Dark theme activated!' : 'Light theme activated!';
+            document.getElementById('dynamicOutput').innerHTML = `
+                <div class="success-message">${message}</div>
+            `;
+        }
+
+        function changeFontSize() {
+            fontSizeMultiplier += 0.1;
+            document.body.style.fontSize = (fontSizeMultiplier * 16) + 'px';
+            
+            if (fontSizeMultiplier > 1.5) {
+                fontSizeMultiplier = 1;
+                document.body.style.fontSize = '16px';
+            }
+        }
+
+        function highlightSidebar(element) {
+            // Remove highlight from all items
+            document.querySelectorAll('.sidebar-item').forEach(item => {
+                item.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+            });
+            
+            // Highlight clicked item
+            element.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+            
+            const text = element.textContent;
+            alert(`You clicked: ${text}`);
+        }
+
+        // Real-time input validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameInput = document.getElementById('nameInput');
+            const emailInput = document.getElementById('emailInput');
+
+            nameInput.addEventListener('input', function() {
+                this.value = this.value.replace(/[0-9]/g, '');
+            });
+
+            emailInput.addEventListener('change', function() {
+                if (this.value && !this.value.includes('@')) {
+                    this.style.borderColor = '#ff5252';
+                } else {
+                    this.style.borderColor = '#ddd';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
